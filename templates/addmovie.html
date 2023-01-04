@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+    input{
+            padding:5px;
+            margin:2px
+    }
+    .demo1{
+            padding:50px;
+            text-align:center;
+            font-family:times new roman;
+    }
+    form{
+            width:100%;
+            height:100%
+    }
+</style>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="demo1">
+    <label><b> Name :</b></label>
+    <input type="text" name="name" placeholder="Name of the Movie" size="40"><br>
+    <label><b>Descr :</b></label>
+    <input type="text" name="desc" placeholder="Description of the Movie" size="40"><br>
+    <label><b> Year :</b></label>
+    <input type="text" name="year" placeholder="Year of the Movie" size="40"><br>
+    <label><b> Image :</b></label>
+    <input type="file" name="img"><br>
+    <input type="submit" name="submit">
+    </div>
+</form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+<style>
+  input{
+            padding:5px;
+            margin:2px
+        }
+        .demo1{
+            padding:50px;
+            text-align:center;
+            font-family:times new roman;
+        }
+</style>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token%}
+  {{form.as_p}}
+   <div class="demo1">
+  <input type="submit" name="submit">
+   </div>
+</form>
+{% endblock %}
